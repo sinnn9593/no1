@@ -1,7 +1,11 @@
 import { BrowserRouter as Router, Route ,Routes} from 'react-router-dom';
-import MoreDetails from "./components/MoreDetails"; // MoreDetails コンポーネントをインポート
-import HomePage from "./components/HomePage";
-import SamplePage from "./components/SamplePage";
+import Home from './components/Home';
+import About from './components/About';
+import Service from './components/Service';
+import Contact from "./components/Contact";
+import MoreDetails from "./components/MoreDetails";
+import Sample from './components/Sample';
+
 
 
 
@@ -9,9 +13,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/service" element = {<Service/>} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/samples" element = {<Sample />} />
         <Route path="/more-details" element = {<MoreDetails />} />
-        <Route path="/samples" element = {<SamplePage />} />
+
 
       </Routes>
     </Router>

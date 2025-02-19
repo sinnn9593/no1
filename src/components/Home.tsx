@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import ThreeModel from './ThreeModel'; // インポートパス修正
 import { Link } from 'react-router-dom'; // Linkを正しくインポート
 
-function HomePage() {
+const Home = () => {
   return (
     <main className="min-h-screen bg-gray-800">
       <div className="w-full max-w-screen-xl mx-auto px-4 min-h-screen">
@@ -19,14 +19,24 @@ function HomePage() {
           className="flex justify-between items-center p-4 text-white"
         >
           <span className="font-bold text-2xl">-Welcome to my website-</span>
-          <nav>
-            <ul className="flex items-center gap-4">
-              <li>Home</li>
-              <li>About</li>
-              <li>Services</li>
-              <li>Contact</li>
-            </ul>
-          </nav>
+
+        <nav>
+          <ul className="flex items-center gap-4">
+            <li>
+                <Link to="/">Home</Link> {/* Homeページにリンク */}
+            </li>
+            <li>
+                <Link to="/about">About</Link> {/* Aboutページにリンク */}
+            </li>
+            <li>
+                <Link to="/service">Service</Link> {/* Servicesページにリンク */}
+            </li>
+            <li>
+                <Link to="/contact">Contact</Link> {/* Contactページにリンク */}
+            </li>
+          </ul>
+        </nav>
+
         </motion.header>
 
         {/* Hero Section */}
@@ -100,4 +110,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Home;

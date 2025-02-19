@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const SamplePage = () => {
+const Sample = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -37,7 +37,11 @@ const SamplePage = () => {
 
       {/* 戻るボタン */}
       <div className="text-center mt-12">
-        <Link to="/" className="px-6 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition">
+        {/* 詳細ボタンを追加 */}
+        <Link to="/service">
+           <button className="px-6 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition">詳細</button>
+        </Link>
+        <Link to="/" className="px-6 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition ml-4">
           戻る
         </Link>
       </div>
@@ -45,4 +49,4 @@ const SamplePage = () => {
   );
 };
 
-export default SamplePage;
+export default Sample;
