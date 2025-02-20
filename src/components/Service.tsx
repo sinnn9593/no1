@@ -49,6 +49,19 @@ const Service = () => {
             className="mx-auto w-60 h-60 object-cover mb-4"
           />
         </div>
+
+         {/* Snake GameのGitHubリンク */}
+        <div className="text-center">
+           <a
+              href="https://github.com/your-username/snake-game" // 実際のGitHub URLをここに挿入
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+           <button className="px-6 py-3 bg-blue-500 text-white text-lg rounded-md hover:bg-blue-600 transition">
+               View on GitHub
+           </button>
+          </a>
+        </div>
       </section>
 
       {/* Pac-Man Section */}
@@ -83,6 +96,18 @@ const Service = () => {
             alt="Pac-Man"
             className="mx-auto w-60 h-60 object-cover mb-4"
           />
+        </div>
+             {/* Pac-ManのGitHubリンク */}
+        <div className="text-center">
+            <a
+               href="https://github.com/your-username/pac-man" // 実際のGitHub URLをここに挿入
+               target="_blank"
+               rel="noopener noreferrer"
+             >
+               <button className="px-6 py-3 bg-blue-500 text-white text-lg rounded-md hover:bg-blue-600 transition">
+                 View on GitHub
+               </button>
+            </a>
         </div>
       </section>
 

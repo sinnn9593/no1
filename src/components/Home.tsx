@@ -8,20 +8,20 @@ const Home = () => {
       <div className="w-full max-w-screen-xl mx-auto px-4 min-h-screen">
         {/* Header */}
         <motion.header
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{
             type: "spring",
             duration: 1,
             delay: 0.5,
             stiffness: 130,
           }}
-          className="flex justify-between items-center p-4 text-white"
+          className="flex justify-between items-center p-2 text-white"
         >
-          <span className="font-bold text-2xl">-Welcome to my website-</span>
+          <span className="font-bold text-5xl">-Welcome to my website-</span>
 
         <nav>
-          <ul className="flex items-center gap-4">
+          <ul className="flex items-center gap-7 text-3xl">
             <li>
                 <Link to="/">Home</Link> {/* Homeページにリンク */}
             </li>
