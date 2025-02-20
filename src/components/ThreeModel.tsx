@@ -8,7 +8,7 @@ const Model = ({
   url,
   scale = 1,
   position = [0, -20, 50],
-  rotation = [90, 90, 90] // 余分なカンマ削除
+  rotation = [90, 90, 90]
 }: {
   url: string;
   scale: number;
@@ -17,12 +17,15 @@ const Model = ({
 }) => {
   const groupRef = useRef<THREE.Group>(null);
 
-  let scene;
-  try {
-    ({ scene }= useGLTF(url));
-  } catch (error) {
+  const { scene, error, isLoading } = useGLTF(url);
+
+  if (isLoading) {
+    return <p>Loading...</p>; // ローディング中の表示
+  }
+
+  if (error) {
     console.error(`Failed to load GLTF model from ${url}:`, error);
-    return null; // エラー時に何も描画しない
+    return <p>Error loading model</p>; // エラー発生時の表示
   }
 
   useFrame((state) => {

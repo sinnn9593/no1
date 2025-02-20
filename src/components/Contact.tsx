@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
@@ -14,22 +15,44 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // メール送信処理は省略しています
-    console.log("Form submitted:", formData);
-    setIsSent(true); // 送信完了メッセージを表示
+    setError(""); // エラーをリセット
+
+
+     // ✅ 環境変数の確認（ここに追加）
+    console.log("Service ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
+    console.log("Template ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+    console.log("Public Key:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        e.target as HTMLFormElement,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setIsSent(true);
+          setFormData({ name: "", email: "", message: "" }); // フォームをリセット
+        },
+        (err) => {
+          console.error("Error:", err);
+          setError("Failed to send message. Please try again.");
+        }
+      );
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-white py-16 px-8">
       <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
         <h2 className="text-3xl font-semibold text-center mb-6">Contact Us</h2>
+
         {isSent ? (
-          <p className="success-message text-center text-green-600">Your message has been sent successfully!</p>
+          <p className="text-center text-green-600">Your message has been sent successfully!</p>
         ) : (
           <form onSubmit={handleSubmit}>
-            <div className="input-group mb-4">
+            <div className="mb-4">
               <label htmlFor="name" className="block text-lg font-medium mb-2">Name</label>
               <input
                 type="text"
@@ -41,7 +64,7 @@ const Contact = () => {
               />
             </div>
 
-            <div className="input-group mb-4">
+            <div className="mb-4">
               <label htmlFor="email" className="block text-lg font-medium mb-2">Email</label>
               <input
                 type="email"
@@ -53,7 +76,7 @@ const Contact = () => {
               />
             </div>
 
-            <div className="input-group mb-4">
+            <div className="mb-4">
               <label htmlFor="message" className="block text-lg font-medium mb-2">Message</label>
               <textarea
                 name="message"
@@ -64,7 +87,7 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            {error && <p className="error-message text-red-500 text-center">{error}</p>}
+            {error && <p className="text-red-500 text-center">{error}</p>}
             <button type="submit" className="w-full py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
               Send Message
             </button>

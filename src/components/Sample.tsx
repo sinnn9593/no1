@@ -54,10 +54,10 @@ const Sample = () => {
       {/* 戻るボタン */}
       <div className="text-center mt-12">
         <Link to="/service">
-          <button className="px-6 py-3 bg-gray-500 text-white text-lg rounded-md hover:bg-gray-600 transition">詳細</button>
+          <button className="px-6 py-3 bg-gray-500 text-white text-lg rounded-md hover:bg-gray-600 transition">More</button>
         </Link>
         <Link to="/" className="px-6 py-3 bg-gray-500 text-white text-lg rounded-md hover:bg-gray-600 transition ml-4">
-          戻る
+          back
         </Link>
       </div>
     </motion.div>

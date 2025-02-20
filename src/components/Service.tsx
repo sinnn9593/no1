@@ -79,7 +79,7 @@ const Service = () => {
 
         <div className="text-center mb-6">
           <img
-            src="/assets/models1/pac-man.png"
+            src="src/assets/models1/pac-man.png"
             alt="Pac-Man"
             className="mx-auto w-60 h-60 object-cover mb-4"
           />
@@ -90,7 +90,7 @@ const Service = () => {
       <div className="text-center mt-12">
         <Link to="/">
           <button className="px-6 py-3 bg-gray-500 text-white text-lg rounded-md hover:bg-gray-600 transition">
-            戻る
+            back
           </button>
         </Link>
       </div>
