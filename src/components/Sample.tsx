@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+
 
 const Sample = () => {
-  const [pacmanAnswer, setPacmanAnswer] = useState(null);
-  const [snakeAnswer, setSnakeAnswer] = useState(null);
 
   return (
     <motion.div

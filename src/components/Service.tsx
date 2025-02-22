@@ -53,7 +53,7 @@ const Service = () => {
          {/* Snake GameのGitHubリンク */}
         <div className="text-center">
            <a
-              href="https://github.com/your-username/snake-game" // 実際のGitHub URLをここに挿入
+              href="https://github.com/sinnn9593/snake_game" // 実際のGitHub URLをここに挿入
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -100,7 +100,7 @@ const Service = () => {
              {/* Pac-ManのGitHubリンク */}
         <div className="text-center">
             <a
-               href="https://github.com/your-username/pac-man" // 実際のGitHub URLをここに挿入
+               href="https://github.com/sinnn9593/pacman" // 実際のGitHub URLをここに挿入
                target="_blank"
                rel="noopener noreferrer"
              >
@@ -110,6 +110,71 @@ const Service = () => {
             </a>
         </div>
       </section>
+      {/* Custom Calculator Section */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-semibold mb-4">🧮 Custom Calculator - 技術解説</h2>
+
+        <h3 className="text-xl font-semibold mb-2">アーキテクチャ</h3>
+        <p className="text-lg text-gray-700 mb-6">
+          Custom Calculatorは、**状態管理型アーキテクチャ**を採用しています。ユーザーの入力に応じて、計算結果がリアルタイムで更新される仕組みです。Reactのコンポーネントを活用して、UIとロジックが効率的に連携するよう設計されています。入力された数値や演算子は状態として管理され、計算が完了するたびに結果が画面に表示されます。
+        </p>
+
+        <h3 className="text-xl font-semibold mb-2">技術スタック</h3>
+        <ul className="list-disc pl-6 mb-6">
+          <li><strong>React:</strong> UIの描画と状態管理にReactを使用しています。状態の変更に応じてコンポーネントが再レンダリングされ、計算結果が即座に反映されます。</li>
+          <li><strong>JavaScript (ES6+):</strong> 計算ロジックは、最新のJavaScriptで実装されています。非同期処理やイベントハンドリングを使用し、ユーザーの入力に即座に反応します。</li>
+          <li><strong>CSS:</strong> ボタンのデザインやレイアウトにはCSSを使用し、シンプルで直感的なインターフェースを提供します。</li>
+        </ul>
+
+        <h3 className="text-xl font-semibold mb-2">ゲームロジックと設計パターン</h3>
+        <p className="text-lg text-gray-700 mb-6">
+          計算機のロジックは、**状態管理**に基づいています。ユーザーが入力する数値や演算子は状態として管理され、計算ボタンを押すたびに、計算が実行され、結果が表示されます。計算の履歴は、ボタンの押下ごとに更新され、計算結果が画面に反映されます。状態遷移は、入力された数値や演算子によって変更され、最終的な結果が表示されます。
+        </p>
+
+        <h3 className="text-xl font-semibold mb-2">設計パターンとアルゴリズム</h3>
+        <p className="text-lg text-gray-700 mb-6">
+           Custom Calculatorの設計では、**状態遷移パターン**を活用しています。各ボタンが押されるごとに状態が遷移し、計算が行われます。また、計算のアルゴリズムは、演算子の優先順位や括弧によるグループ化を適切に処理するように設計されています。これにより、複雑な計算式も正しく計算されるようになっています。
+        </p>
+
+        <h3 className="text-xl font-semibold mb-2">UI/UXデザイン</h3>
+        <p className="text-lg text-gray-700 mb-6">
+          UIデザインは、**直感的な操作**を重視しています。ボタンは大きく配置され、ユーザーが簡単にクリックできるようになっています。色使いやレイアウトもシンプルで、誰でもすぐに操作できるように設計されています。結果が即座に反映されることで、ユーザーのフィードバックが素早く得られ、快適な使用感を提供します。
+        </p>
+
+        <div className="text-center mb-6">
+          <img
+           src="/assets/models1/calculator.png" // 電卓の画像を適宜変更
+           alt="Custom Calculator"
+           className="mx-auto w-60 h-60 object-cover mb-4"
+          />
+        </div>
+    </section>
+  {/* Custom CalculatorのGitHubリンク */}
+        <div className="text-center mb-6">
+           <div className="flex justify-center gap-6">
+              <a
+                href="https://github.com/sinnn9593/calculator-for-delivery/archive/refs/tags/v1.0.0.zip"
+                target="_blank"
+                rel="noopener noreferrer"
+             >
+                 <button className="px-6 py-3 bg-blue-500 text-white text-lg rounded-md hover:bg-blue-600 transition">
+                  Download for Windows
+                 </button>
+              </a>
+
+              <a
+            href="https://github.com/sinnn9593/calculator-for-delivery/archive/refs/tags/v1.0.0.tar.gz"
+            target="_blank"
+            rel="noopener noreferrer"
+              >
+                <button className="px-6 py-3 bg-blue-500 text-white text-lg rounded-md hover:bg-blue-600 transition">
+                   Download for MacOS/Linux
+                </button>
+           </a>
+          </div>
+        </div>
+
+
 
       {/* 戻るボタン */}
       <div className="text-center mt-12">

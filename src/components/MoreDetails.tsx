@@ -9,6 +9,19 @@ const ServicePage = () => {
       className="container mx-auto px-6 py-12"
     >
       <h1 className="text-3xl font-bold text-center mb-8">Portfolio Site Overview</h1>
+      {/* GitHubリンクのセクション */}
+      <div className="text-center mt-12">
+        <a
+          href="https://github.com/sinnn9593/no1" // 実際のGitHubリポジトリのURLをここに挿入
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+        <button className="px-6 py-3 bg-blue-500 text-white text-lg rounded-md hover:bg-blue-600 transition">
+           View on GitHub
+        </button>
+        </a>
+      </div>
+
 
       {/* 設計思想 */}
       <section className="mb-12">

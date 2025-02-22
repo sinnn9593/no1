@@ -17,16 +17,8 @@ const Model = ({
 }) => {
   const groupRef = useRef<THREE.Group>(null);
 
-  const { scene, error, isLoading } = useGLTF(url);
+  const { scene } = useGLTF(url);
 
-  if (isLoading) {
-    return <p>Loading...</p>; // ローディング中の表示
-  }
-
-  if (error) {
-    console.error(`Failed to load GLTF model from ${url}:`, error);
-    return <p>Error loading model</p>; // エラー発生時の表示
-  }
 
   useFrame((state) => {
     if (groupRef.current) {
