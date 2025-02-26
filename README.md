@@ -1,55 +1,102 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### プロジェクト名: No1 ポートフォリオサイト
 
-Currently, two official plugins are available:
+## 概要
+このプロジェクトは、いくつかのゲーム（パックマンやスネーク）やDockerとPyQt5を使って開発したカスタム電卓などを紹介する、個人のポートフォリオサイトです。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 主な機能
+- **ランディングページ**: ポートフォリオの紹介、異なるプロジェクトのハイライト。
+- **Aboutページ**: 制作者の紹介、過去のプロジェクトや競技プログラミングの成果。
+- **Servicesページ**: 提供するサービスの紹介（現在制作中）。
+- **Contactフォーム**: ユーザーが制作者に連絡できるフォーム。
+- **ゲームセクション**: パックマンやスネークなどのゲーム。
+- **電卓**: 絶対値計算機能を搭載したカスタム電卓。
 
-## Expanding the ESLint configuration
+## 目次
+1. [インストール](#インストール)
+2. [使用方法](#使用方法)
+3. [使用技術](#使用技術)
+4. [プロジェクト構成](#プロジェクト構成)
+5. [貢献方法](#貢献方法)
+6. [ライセンス](#ライセンス)
+7. [UML図](#uml図)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## インストール
 
-- Configure the top-level `parserOptions` property like this:
+### プロジェクトをローカルで実行するには
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. リポジトリをクローンする:
+   ```bash
+   git clone https://github.com/username/no1.git
+   ```
+2. 依存関係をインストールする:
+   ```bash
+   cd no1
+   npm install
+   ```
+3. 開発サーバーを起動する:
+   ```bash
+   npm run dev
+   ```
+   サイトは [http://localhost:3000](http://localhost:3000) でアクセスできます。
+
+## 使用方法
+- **ランディングページ**: サイトを開くと、ポートフォリオの紹介とプロジェクトの概要が表示されます。
+- **ゲーム**: ホームページやナビゲーションメニューからパックマンやスネークのゲームにアクセスできます。
+- **電卓**: カスタム電卓は基本的な数学的演算が可能で、将来的に新しい機能が追加される予定です。
+
+## 使用技術
+- **React**: ユーザーインターフェースを作成するためのフロントエンドライブラリ。
+- **Vite**: React用の高速ビルドツールおよび開発サーバー。
+- **Docker**: カスタム電卓のためのDocker環境構築。
+- **PyQt5**: GUIアプリケーション開発に使用。
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+## プロジェクト構成
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+/src
+  /components
+    HomePage.tsx
+    AboutPage.tsx
+    ServicesPage.tsx
+    ContactForm.tsx
+    ThreeModel.tsx
+  /assets
+    /models1
+      scene.gltf
+  /styles
+    main.css
+public/index.html
+vite.config.ts
+package.json
 ```
-=======
-# no1
-My Portfolio Website
->>>>>>> ef35e7099d9bdbfa7d7e334b92560f3279689f7c
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+## UML図
+
+### クラス図
+```plaintext
+classDiagram
+  class App {
+    +basename: string
+    +App()
+  }
+  
+  class Home {
+    +ThreeModel: ThreeModel
+  }
+  
+  class About
+  class Service
+  class Contact
+  class MoreDetails
+  class Sample
+
+  App --> Home
+  App --> About
+  App --> Service
+  App --> Contact
+  App --> MoreDetails
+  App --> Sample
+  Home --> ThreeModel
+  MoreDetails --> Sample
+```
+```
