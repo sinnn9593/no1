@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Service = () => {
+  const snakeUrl = `${import.meta.env.BASE_URL}assets/models1/snake.png`;  // 修正箇所
+  const packmanUrl = `${import.meta.env.BASE_URL}src/assets/models1/pac-man.png`;
+  const calculatorUrl = `${import.meta.env.BASE_URL}src/assets/models1/calculator.png`;
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -44,7 +47,7 @@ const Service = () => {
 
         <div className="text-center mb-6">
           <img
-            src="/assets/models1/snake.png"
+            src={snakeUrl}
             alt="Snake Game"
             className="mx-auto w-60 h-60 object-cover mb-4"
           />
@@ -92,7 +95,7 @@ const Service = () => {
 
         <div className="text-center mb-6">
           <img
-            src="src/assets/models1/pac-man.png"
+            src={packmanUrl}
             alt="Pac-Man"
             className="mx-auto w-60 h-60 object-cover mb-4"
           />
@@ -143,7 +146,7 @@ const Service = () => {
 
         <div className="text-center mb-6">
           <img
-           src="/assets/models1/calculator.png" // 電卓の画像を適宜変更
+           src={calculatorUrl} // 電卓の画像を適宜変更
            alt="Custom Calculator"
            className="mx-auto w-60 h-60 object-cover mb-4"
           />
