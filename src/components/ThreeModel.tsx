@@ -35,6 +35,7 @@ const Model = ({
 };
 
 const ThreeModel = () => {
+  const modelUrl = `${import.meta.env.BASE_URL}assets/models1/scene.gltf`;  // 修正箇所
   return (
     <motion.div
       initial={{ x: -100, opacity: 0 }}
@@ -49,7 +50,7 @@ const ThreeModel = () => {
     >
       <Canvas camera={{ position: [20, 0, 30], fov: 50 }}>
         <ambientLight intensity={3} />
-        <Model url="/assets/models1/scene.gltf" scale={7.0} position={[-10, -15, 0]} rotation={[0, 0, 0]} />
+        <Model url= {modelUrl} scale={7.0} position={[-10, -15, 0]} rotation={[0, 0, 0]} />
         <OrbitControls />
       </Canvas>
     </motion.div>
