@@ -5,13 +5,13 @@ import Service from './components/Service';
 import Contact from "./components/Contact";
 import MoreDetails from "./components/MoreDetails";
 import Sample from './components/Sample';
-
+const basename = import.meta.env.MODE === "development" ? "/" : "/no1/";
 
 
 
 function App() {
   return (
-    <Router>
+    <Router basename={basename}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
