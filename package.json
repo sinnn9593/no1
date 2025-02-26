@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-     "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -22,6 +22,7 @@
     "react-dom": "^18.3.1",
     "react-error-boundary": "^5.0.0",
     "react-router-dom": "^7.1.5",
+    "simple-git": "^3.27.0",
     "three": "^0.173.0"
   },
   "devDependencies": {
