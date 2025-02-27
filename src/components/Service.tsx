@@ -2,9 +2,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Service = () => {
-  const snakeUrl = `${import.meta.env.BASE_URL}src/assets/models1/snake.png`;  // 修正箇所
+  const snakeUrl = `${import.meta.env.BASE_URL}src/assets/models1/snake.png`;
   const packmanUrl = `${import.meta.env.BASE_URL}src/assets/models1/pac-man.png`;
   const calculatorUrl = `${import.meta.env.BASE_URL}assets/models1/calculator.png`;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
