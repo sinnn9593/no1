@@ -62,7 +62,7 @@ const ServicePage = () => {
           ページの高速化と軽量化を実現するために、以下の技術を適用しました。
         </p>
         <ul className="list-disc pl-6 text-gray-700 mt-4">
-          <li>画像の WebP 変換による軽量化</li>
+          <li>SPAによるページ遷移の高速化</li>
           <li>Framer Motion による最適なアニメーション</li>
           <li>Code Splitting による初回ロードの負担軽減</li>
         </ul>
@@ -72,9 +72,8 @@ const ServicePage = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">🔮 今後の展望</h2>
         <ul className="list-disc pl-6 text-gray-700">
-          <li>新規プロジェクトの追加と更新</li>
+          <li>新規プロジェクトの追加</li>
           <li>カスタムフックを活用したコードの整理</li>
-          <li>API 連携による動的なコンテンツ生成</li>
         </ul>
       </section>
 
