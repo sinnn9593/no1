@@ -72,7 +72,9 @@ const ServicePage = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">🔮 今後の展望</h2>
         <ul className="list-disc pl-6 text-gray-700">
-          <li>新規プロジェクトの追加</li>
+          <li>カスタム電卓のiosでの起動を可能にする</li>
+          <li>カスタムフックを活用したコードの整理</li>
+          <li>snake gameとpacmanの拡張</li>
           <li>カスタムフックを活用したコードの整理</li>
         </ul>
       </section>
