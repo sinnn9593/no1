@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Service = () => {
-  const snakeUrl = `${import.meta.env.VITE_BASE_URL}src/assets/models1/snake.png`;
-  const packmanUrl = `${import.meta.env.VITE_BASE_URL}/assets/models1/pac-man.png`;
-  const calculatorUrl = `${import.meta.env.VITE_BASE_URL}/models1/calculator.png`;
+  const snakeUrl = `${import.meta.env.VITE_BASE_URL || '/src/'}assets/models1/snake.png`;
+  const packmanUrl = `${import.meta.env.VITE_BASE_URL || '/src/'}assets/models1/pac-man.png`;
+  const calculatorUrl = `${import.meta.env.VITE_BASE_URL || '/src/'}assets/models1/calculator.png`;
 
   return (
     <motion.div
