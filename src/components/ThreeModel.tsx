@@ -35,7 +35,7 @@ const Model = ({
 };
 
 const ThreeModel = () => {
-  const modelUrl = `${import.meta.env.BASE_URL}assets/models1/scene.gltf`;  // 修正箇所
+  const modelUrl = `${import.meta.env.VITE_BASE_URL}assets/models1/scene.gltf`;  // 修正箇所
   return (
     <motion.div
       initial={{ x: -100, opacity: 0 }}

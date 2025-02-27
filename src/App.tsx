@@ -5,8 +5,9 @@ import Service from './components/Service';
 import Contact from "./components/Contact";
 import MoreDetails from "./components/MoreDetails";
 import Sample from './components/Sample';
-const basename = import.meta.env.MODE === "development" ? "/" : "/no1/";
 
+
+const basename = import.meta.env.VITE_BASE_URL || "/";
 
 
 function App() {
