@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 const ServicePage = () => {
+  const to_home = `${import.meta.env.BASE_URL}`;
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -81,7 +82,7 @@ const ServicePage = () => {
 
       {/* 戻るボタン */}
       <div className="text-center mt-12">
-        <a href="/" className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
+        <a href={to_home} className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
           back
         </a>
       </div>
