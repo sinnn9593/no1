@@ -26,7 +26,7 @@ const Service = () => {
         <h3 className="text-xl font-semibold mb-2">技術スタック</h3>
         <ul className="list-disc pl-6 mb-6">
           <li><strong>HTML5 Canvas:</strong> ゲームの描画にはCanvas APIを使用します。ヘビの移動、果物の位置、スコアボードなど、全ての描画はCanvasで行われ、リアルタイムで更新されます。</li>
-          <li><strong>JavaScript (ES6+):</strong> ゲームのロジックは、最新のJavaScript（ES6）を使用して非同期処理やイベント駆動型で実装されます。非同期処理は`setInterval`や`requestAnimationFrame`を使い、描画や状態更新を定期的に行います。</li>
+          <li><strong>JavaScript (ES6+):</strong> ゲームのロジックは、最新のJavaScript（ES6）を使用しイベント駆動型で実装されます。非同期処理は`setInterval`や`requestAnimationFrame`を使い、描画や状態更新を定期的に行います。</li>
           <li><strong>CSS:</strong> スタイルの基本的な部分はCSSを使用していますが、ゲーム本体における動的な描画処理はすべてCanvas上で行われます。</li>
         </ul>
 
