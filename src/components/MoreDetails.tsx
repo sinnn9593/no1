@@ -40,7 +40,7 @@ const ServicePage = () => {
           <li><strong>UI スタイリング:</strong> TailwindCSS, Framer Motion</li>
           <li><strong>3D モデリング:</strong> Three.js, React Three Fiber</li>
           <li><strong>ルーティング:</strong> React Router</li>
-          <li><strong>デプロイ環境:</strong> Vercel</li>
+          <li><strong>デプロイ環境:</strong> Github Pages</li>
         </ul>
       </section>
 
