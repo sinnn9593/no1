@@ -23,7 +23,7 @@ const Sample = () => {
           <h3 className="mt-4 text-xl font-bold">🎮 遊び方</h3>
           <p className="text-base">Pac-Manは、矢印キーを使って上下左右に移動できます。迷路内に散らばるドットをすべて食べると、ステージクリアとなります。敵のゴーストたちに捕まるとミスになりますが、迷路内にあるパワーエサを食べると一定時間無敵になり、ゴーストを捕まえて倒すことができます。</p>
           <h3 className="mt-4 text-xl font-bold">🧩 豆知識</h3>
-          <p className="text-base">ゲームの敵キャラにはそれぞれ異なるAIパターンがあり、特定のルートで動きます。これを覚えると攻略しやすくなります！</p>
+          <p className="text-base">ゲームの敵キャラにはそれぞれ異なる行動パターンがあり、特定のルートで動きます。これを覚えると攻略しやすくなります</p>
         </div>
 
         {/* Snake Game */}
@@ -43,9 +43,13 @@ const Sample = () => {
           <h2 className="text-2xl font-semibold">🔢 カスタム電卓</h2>
           <p className="text-lg text-gray-700 mt-2">Reactで作った電卓アプリ。</p>
           <h3 className="mt-4 text-xl font-bold">🛠️ 使い方</h3>
-          <p className="text-base">カスタム電卓は基本的な四則演算（加算、減算、乗算、除算）に加え、特定の数学的機能を備えています。ボタンをクリックするだけで計算でき、直感的に操作できます。</p>
-          <h3 className="mt-4 text-xl font-bold">📝 特徴</h3>
-          <p className="text-base">この電卓はカスタマイズ可能で、新しい計算機能を追加することができます。例えば、絶対値計算や三角関数など、ニーズに応じて拡張が可能です。</p>
+          <p className="text-base">カスタム電卓は、２つの数字の差を出することに特化したデスクトップアプリです。特にお釣りの計算などに便利です。数字を入力し、ボタンを押すとお釣りが自動的に出力されます。
+
+          </p>
+          <h3 className="mt-4 text-xl font-bold">📝 予定</h3>
+          <p className="text-base">この電卓は、IOSなどのPC以外でも使えるように拡張する予定です。</p>
+          <h3 className="mt-4 text-xl font-bold">📝 ターゲット</h3>
+          <p className="text-base">この電卓は、急にお釣りを計算しないといけないときに便利です。通常の電卓であれば、四則演算やそのほかにも小数点を含む計算やルートなど多岐にわたりますが、このデスクトップアプリは、差を取ることだけに特化しているので、思わぬボタンの打ち間違いなどをふせぐことができます。また上下の数字を入力する欄の数字を反転させても、絶対値を返すので、問題なく求めていた結果を返します。</p>
         </div>
       </div>
 

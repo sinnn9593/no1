@@ -28,8 +28,8 @@ const ServicePage = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">🎯 設計思想</h2>
         <p className="text-gray-700">
-          本ポートフォリオは、インタラクティブなデザインと技術的な挑戦を重視して構築されました。
-          フロントエンドのモダン技術を採用し、拡張性とメンテナンス性を考慮した設計をしています。
+          本ポートフォリオは、インタラクティブなデザイン,ページ遷移の高速化を重視して構築されました。
+          フロントエンドのモダン技術を採用し、拡張性、コンポーネント分割とルーティング設定によるメンテナンス性そして可読性を考慮した設計をしています。
         </p>
       </section>
 
@@ -37,6 +37,7 @@ const ServicePage = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">🛠 技術スタック</h2>
         <ul className="list-disc pl-6 text-gray-700">
+
           <li><strong>フロントエンド:</strong> React (TypeScript), Vite</li>
           <li><strong>UI スタイリング:</strong> TailwindCSS, Framer Motion</li>
           <li><strong>3D モデリング:</strong> Three.js, React Three Fiber</li>
@@ -52,31 +53,33 @@ const ServicePage = () => {
         <ul className="list-disc pl-6 text-gray-700 mt-4">
           <li><strong>ビルド時間の最適化:</strong> Vite を利用し、HMR（ホットリロード）を活用</li>
           <li><strong>3D モデルの負荷軽減:</strong> GLTF ファイルの最適化と lazy loading</li>
-          <li><strong>レスポンシブデザイン:</strong> TailwindCSS のユーティリティクラスで適用</li>
+          <li><strong>レスポンシブデザイン:</strong> TailwindCSSwoを適用し、各コンポーネントやページに関するファイルの読み取りの量を減少</li>
         </ul>
       </section>
 
       {/* パフォーマンス最適化 */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">🚀 パフォーマンス最適化</h2>
+        <h2 className="text-2xl font-semibold mb-4">🚀 パフォーマンスの最適化と3Dオブジェクトによる動的なデザイン</h2>
         <p className="text-gray-700">
-          ページの高速化と軽量化を実現するために、以下の技術を適用しました。
+          ページの高速化と可読性の向上を実現するために、以下の技術を適用しました。
         </p>
         <ul className="list-disc pl-6 text-gray-700 mt-4">
           <li>SPAによるページ遷移の高速化</li>
           <li>Framer Motion による最適なアニメーション</li>
-          <li>Code Splitting による初回ロードの負担軽減</li>
+          <li>コード分割による初回ロードの負担軽減</li>
         </ul>
+        <p className="text-gray-700">
+           Three.js と React Three Fiber を活用し、3D オブジェクトを用いたダイナミックなデザインを実現しました。
+        </p>
       </section>
 
       {/* 今後の展望 */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">🔮 今後の展望</h2>
+        <h2 className="text-2xl font-semibold mb-4">今後の展望</h2>
         <ul className="list-disc pl-6 text-gray-700">
-          <li>カスタム電卓のiosでの起動を可能にする</li>
+          <li>ブログ機能の追加</li>
           <li>カスタムフックを活用したコードの整理</li>
-          <li>snake gameとpacmanの拡張</li>
-          <li>カスタムフックを活用したコードの整理</li>
+          <li>ページ内容の充実</li>
         </ul>
       </section>
 
