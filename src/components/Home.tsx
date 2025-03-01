@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import ThreeModel from './ThreeModel'; // インポートパス修正
-import { Link } from 'react-router-dom'; // Linkを正しくインポート
+import { motion } from "framer-motion";
+import ThreeModel from "./ThreeModel"; // インポートパス修正
+import { Link } from "react-router-dom"; // Linkを正しくインポート
 
 const Home = () => {
   return (
@@ -20,23 +20,23 @@ const Home = () => {
         >
           <span className="font-bold text-5xl">-Welcome to my website-</span>
 
-        <nav>
-          <ul className="flex items-center gap-7 text-3xl">
-            <li>
+          <nav>
+            <ul className="flex items-center gap-7 text-3xl">
+              <li>
                 <Link to="/">Home</Link> {/* Homeページにリンク */}
-            </li>
-            <li>
+              </li>
+              <li>
                 <Link to="/about">About</Link> {/* Aboutページにリンク */}
-            </li>
-            <li>
-                <Link to="/service">Service</Link> {/* Servicesページにリンク */}
-            </li>
-            <li>
+              </li>
+              <li>
+                <Link to="/service">Service</Link>{" "}
+                {/* Servicesページにリンク */}
+              </li>
+              <li>
                 <Link to="/contact">Contact</Link> {/* Contactページにリンク */}
-            </li>
-          </ul>
-        </nav>
-
+              </li>
+            </ul>
+          </nav>
         </motion.header>
 
         {/* Hero Section */}
@@ -91,10 +91,10 @@ const Home = () => {
                 </Link>
 
                 {/* Sample ボタン */}
-                <Link to ="/samples">
-                   <button className="px-3 py-6 rounded-md border border-white border-2 my-4 hover:translate-y-1 duration-150">
-                     <span className="font-bold text-orange-500">Samples</span>
-                   </button>
+                <Link to="/samples">
+                  <button className="px-3 py-6 rounded-md border border-white border-2 my-4 hover:translate-y-1 duration-150">
+                    <span className="font-bold text-orange-500">Samples</span>
+                  </button>
                 </Link>
               </motion.div>
             </div>
@@ -108,6 +108,6 @@ const Home = () => {
       </div>
     </main>
   );
-}
+};
 
 export default Home;

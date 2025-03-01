@@ -11,7 +11,9 @@ const Contact = () => {
   const [isSent, setIsSent] = useState(false);
   const [error, setError] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -19,8 +21,7 @@ const Contact = () => {
     e.preventDefault();
     setError(""); // エラーをリセット
 
-
-     // ✅ 環境変数の確認（ここに追加）
+    // ✅ 環境変数の確認（ここに追加）
     console.log("Service ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
     console.log("Template ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
     console.log("Public Key:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
@@ -29,7 +30,7 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         e.target as HTMLFormElement,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
@@ -39,7 +40,7 @@ const Contact = () => {
         (err) => {
           console.error("Error:", err);
           setError("Failed to send message. Please try again.");
-        }
+        },
       );
   };
 
@@ -49,11 +50,15 @@ const Contact = () => {
         <h2 className="text-3xl font-semibold text-center mb-6">Contact Us</h2>
 
         {isSent ? (
-          <p className="text-center text-green-600">Your message has been sent successfully!</p>
+          <p className="text-center text-green-600">
+            Your message has been sent successfully!
+          </p>
         ) : (
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="name" className="block text-lg font-medium mb-2">Name</label>
+              <label htmlFor="name" className="block text-lg font-medium mb-2">
+                Name
+              </label>
               <input
                 type="text"
                 name="name"
@@ -65,7 +70,9 @@ const Contact = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="email" className="block text-lg font-medium mb-2">Email</label>
+              <label htmlFor="email" className="block text-lg font-medium mb-2">
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
@@ -77,7 +84,12 @@ const Contact = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="message" className="block text-lg font-medium mb-2">Message</label>
+              <label
+                htmlFor="message"
+                className="block text-lg font-medium mb-2"
+              >
+                Message
+              </label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -88,7 +100,10 @@ const Contact = () => {
             </div>
 
             {error && <p className="text-red-500 text-center">{error}</p>}
-            <button type="submit" className="w-full py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
+            <button
+              type="submit"
+              className="w-full py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
+            >
               Send Message
             </button>
           </form>
@@ -96,7 +111,10 @@ const Contact = () => {
 
         {/* 戻るボタン */}
         <div className="text-center mt-6">
-          <Link to="/" className="px-6 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition">
+          <Link
+            to="/"
+            className="px-6 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition"
+          >
             Back to Home
           </Link>
         </div>

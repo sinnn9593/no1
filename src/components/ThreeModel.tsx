@@ -8,7 +8,7 @@ const Model = ({
   url,
   scale = 1,
   position = [0, -20, 50],
-  rotation = [90, 90, 90]
+  rotation = [90, 90, 90],
 }: {
   url: string;
   scale: number;
@@ -19,7 +19,6 @@ const Model = ({
 
   const { scene } = useGLTF(url);
 
-
   useFrame((state) => {
     if (groupRef.current) {
       groupRef.current.position.y = Math.sin(state.clock.elapsedTime) * 0.5;
@@ -29,13 +28,18 @@ const Model = ({
 
   return (
     <group ref={groupRef}>
-      <primitive object={scene} scale={scale} position={position} rotation={rotation} />
+      <primitive
+        object={scene}
+        scale={scale}
+        position={position}
+        rotation={rotation}
+      />
     </group>
   );
 };
 
 const ThreeModel = () => {
-  const modelUrl = `${import.meta.env.VITE_BASE_URL  || '/src/'}assets/models1/scene.gltf`;  // 修正箇所
+  const modelUrl = `${import.meta.env.VITE_BASE_URL || "/src/"}assets/models1/scene.gltf`; // 修正箇所
   return (
     <motion.div
       initial={{ x: -100, opacity: 0 }}
@@ -44,13 +48,18 @@ const ThreeModel = () => {
         type: "spring",
         duration: 0.8,
         delay: 0.9,
-        stiffness: 160
+        stiffness: 160,
       }}
       className="w-full h-[500px]"
     >
       <Canvas camera={{ position: [20, 0, 30], fov: 50 }}>
         <ambientLight intensity={3} />
-        <Model url= {modelUrl} scale={7.0} position={[-10, -15, 0]} rotation={[0, 0, 0]} />
+        <Model
+          url={modelUrl}
+          scale={7.0}
+          position={[-10, -15, 0]}
+          rotation={[0, 0, 0]}
+        />
         <OrbitControls />
       </Canvas>
     </motion.div>
