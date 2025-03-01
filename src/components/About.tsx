@@ -80,12 +80,6 @@ const About = () => {
           </p>
         </div>
 
-        <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">最後に</h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            私のキャリアはまだ始まったばかりですが、これからも新しい技術に挑戦し、成長し続けたいと思っています。そして、私の作ったものが、少しでも多くの人々の役に立つことができれば最高です。どんな小さなことでも、人々にインパクトを与えられるようなエンジニアでありたいと考えています。
-          </p>
-        </div>
 
         <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -118,8 +112,14 @@ const About = () => {
       ➡️ GitHubリポジトリはこちら
         </a>
        </div>
-
-       <div className="text-center mt-12">
+    </div>
+    <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">最後に</h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            私のキャリアはまだ始まったばかりですが、これからも新しい技術に挑戦し、成長し続けたいと思っています。そして、私の作ったものが、少しでも多くの人々の役に立つことができれば最高です。どんな小さなことでも、人々にインパクトを与えられるようなエンジニアでありたいと考えています。
+          </p>
+    </div>
+    <div className="text-center mt-12">
           <button
             onClick={goHome}
             className="bg-teal-500 text-white py-2 px-6 rounded-lg shadow-md hover:bg-teal-600 transition duration-300"
@@ -127,7 +127,6 @@ const About = () => {
             back
           </button>
       </div>
-    </div>
   </div>
 </div>
   );
