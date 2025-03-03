@@ -117,15 +117,30 @@ const About = () => {
             </a>
           </div>
         </div>
-        {/*atcoder */}
+        {/* AtCoder戦績 */}
         <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-            Atcoder
+            AtCoder 戦績
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            どんな仕事にも共通して大切にしているのは、情熱と誠実です。私は自分がやることに対して責任を持ち、常に誠実に取り組みます。情熱を持って仕事に取り組むことが、良い結果を生み出す源泉だと信じています。個人としての成長だけでなく、チームや組織、さらには社会にどれだけ貢献できるかを考えながら仕事を進めていきます。
+            AtCoderでは、様々なアルゴリズムやデータ構造に挑戦してきました。灰色上位に位置することができたのは、問題解決能力を磨く努力と、問題の解析を迅速に行う力を養ってきた証です。競技プログラミングの世界では、常に新たな挑戦が待っていますが、その中で培ったスキルは、現実世界の問題解決にも応用できると感じています。
           </p>
+
+          <div className="mt-6">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              レート分布
+            </h3>
+            <p className="text-md text-gray-600">
+              以下は、私のAtCoderでのレート分布です。これを見て、どの程度のスキルレベルにいるのかが一目でわかります。これからもさらに上を目指して挑戦し続けます。
+            </p>
+            <img
+              src="src/assets/atcoder3.png" // レート分布の画像URLを挿入
+              alt="AtCoder レート分布"
+              className="w-3/5 mt-4 rounded-md shadow-md"
+            />
+          </div>
         </div>
+
         <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">最後に</h2>
           <p className="text-lg text-gray-700 leading-relaxed">

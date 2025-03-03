@@ -65,7 +65,9 @@ const Service = () => {
           <br />
           果物はランダムな座標に生成され、ヘビが果物を食べるとスコアが加算され、ヘビの長さが1マス分伸びる仕組みです。
           <br />
-          ゲームオーバー判定は<span className="underline">「壁への衝突」</span>,<span className="underline">「自身の身体への衝突」</span>によって行われ、ゲーム終了時にはスコアが表示されるようになっています。
+          ゲームオーバー判定は<span className="underline">「壁への衝突」</span>,
+          <span className="underline">「自身の身体への衝突」</span>
+          によって行われ、ゲーム終了時にはスコアが表示されるようになっています。
         </p>
 
         <h3 className="text-xl font-semibold mb-2">速度調整と難易度設計</h3>
@@ -101,7 +103,7 @@ const Service = () => {
         <h3 className="text-xl font-semibold mb-2">ファイル構成 📂</h3>
         <pre className="bg-gray-100 p-4 rounded-md mb-6">
           <code>
-          {`
+            {`
 snake_game/
 │
 ├── main.py           # ゲームのメインロジック
@@ -140,15 +142,19 @@ snake_game/
           <br />
           各エンティティは独立したオブジェクトとして管理され、ゲームループ内で毎フレームごとに状態が更新されます。またPygameを採用しているので、Surfaceに直接描画しています。
           <br />
-          特にでは、<span className="underline">「ターゲット座標の設定」「最短経路探索」「ランダム移動」「ステージの自動生成」</span>など複数のロジックが組み合わさることで、単純な追跡行動に終わらず、多様な動きを実現しています。
+          特にでは、
+          <span className="underline">
+            「ターゲット座標の設定」「最短経路探索」「ランダム移動」「ステージの自動生成」
+          </span>
+          など複数のロジックが組み合わさることで、単純な追跡行動に終わらず、多様な動きを実現しています。
           <br />
           この構造により、ステージ設計やゴーストの行動パターンをパラメータ化し、ゲームバランスを細かく調整できる設計になっています。
         </p>
-         {/* フォルダ構成の挿入 */}
-  <h3 className="text-xl font-semibold mb-2">📂 フォルダ構成</h3>
-  <pre className="bg-gray-100 p-4 rounded-md mb-6">
-    <code>
-      {`
+        {/* フォルダ構成の挿入 */}
+        <h3 className="text-xl font-semibold mb-2">📂 フォルダ構成</h3>
+        <pre className="bg-gray-100 p-4 rounded-md mb-6">
+          <code>
+            {`
 pacman/
 ├── assets/              // 画像・音声データ
 ├── src/
@@ -159,8 +165,8 @@ pacman/
 │   └── utils.py         // 補助関数
 └── README.md            // 技術解説＆プレイガイド
       `}
-    </code>
-  </pre>
+          </code>
+        </pre>
         <h3 className="text-xl font-semibold mb-2">技術スタック</h3>
         <ul className="list-disc pl-6 mb-6">
           <li>
@@ -168,7 +174,8 @@ pacman/
             <br />
             ゲーム全体のロジックからグラフィック描画、キャラクターの動作制御、衝突判定、スコア管理に至るまで、すべてPythonで実装しています。特にPygameライブラリを採用しており、ゲームウィンドウの生成、イベントハンドリング（キー入力）、タイマー管理、音声再生などの基本機能をフル活用しています。Pythonのオブジェクト指向を活かし、Pac-Man、ゴースト、エサ、壁といった各要素を個別のクラスに分離することで、可読性と拡張性を確保しています。
             また、AIアルゴリズム（追跡、逃避、ランダム移動など）は、それぞれ専用のメソッドとして実装し、ゴーストごとに異なる性格を持たせることが可能になっています。これにより、パラメーター調整のみで難易度を柔軟に変更できる設計になっています。
-            <span className="underline">エンティティの状態管理や衝突判定</span>、スコア計算などの各種ロジックをフレーム単位で更新する、ゲームループ型の構成です。
+            <span className="underline">エンティティの状態管理や衝突判定</span>
+            、スコア計算などの各種ロジックをフレーム単位で更新する、ゲームループ型の構成です。
           </li>
 
           <li>
@@ -225,9 +232,14 @@ pacman/
           </li>
         </ul>
         <p className="text-lg text-gray-700 mb-6">
-          これらの複雑なゴーストの行動規範は、<span className="underline"><strong>マンハッタン距離</strong>
-          を基準にしたターゲット座標の設定、および<strong>深さ優先探索</strong>
-          に基づく<strong>最短経路探索</strong>によって実現されています</span>。
+          これらの複雑なゴーストの行動規範は、
+          <span className="underline">
+            <strong>マンハッタン距離</strong>
+            を基準にしたターゲット座標の設定、および
+            <strong>深さ優先探索</strong>
+            に基づく<strong>最短経路探索</strong>によって実現されています
+          </span>
+          。
           <br />
           またパックマンのマップについて、毎回プレイごとに異なるマップをランダムに生成することを可能にしました。深さ優先探索を用いて、スタックに初めの座標を挿入することで、そこから、通路を構築することでマップの生成をしています。
         </p>
@@ -295,11 +307,19 @@ pacman/
         <ul className="list-disc pl-6 mb-6">
           <li>
             <strong>Python & PyQt5:</strong>
-            <span className="underline">デスクトップアプリとしてPythonで実装し、UI部分はPyQt5を使用</span>。直感的な操作感を提供します。
+            <span className="underline">
+              デスクトップアプリとしてPythonで実装し、UI部分はPyQt5を使用
+            </span>
+            。直感的な操作感を提供します。
           </li>
           <li>
             <strong>Docker:</strong>
-            アプリケーションは<span className="underline">Dockerコンテナで管理</span>。<span className="underline">Windows・macOSのどちらでも動作するクロスプラットフォーム設計</span>です。
+            アプリケーションは
+            <span className="underline">Dockerコンテナで管理</span>。
+            <span className="underline">
+              Windows・macOSのどちらでも動作するクロスプラットフォーム設計
+            </span>
+            です。
           </li>
           <li>
             <strong>シンプル設計:</strong>
@@ -324,7 +344,10 @@ pacman/
           <li>引き算結果は絶対値で表示（マイナス表示なし）</li>
           <li>キー入力とボタンクリック両対応</li>
           <li>デザインは極力シンプルに、業務利用を想定</li>
-          <li><span className="underline">Windows・macOS対応済み</span>。将来的にモバイル版も計画中</li>
+          <li>
+            <span className="underline">Windows・macOS対応済み</span>
+            。将来的にモバイル版も計画中
+          </li>
         </ul>
 
         <h3 className="text-xl font-semibold mb-2">UI/UXデザイン</h3>

@@ -108,11 +108,17 @@ const Contact = () => {
             </button>
           </form>
         )}
-         {/* 送信後のメール技術スタックの説明 */}
-         {!isSent && (
+        {/* 送信後のメール技術スタックの説明 */}
+        {!isSent && (
           <div className="mt-4 text-center text-lg text-gray-600">
-            <strong>※送信するとこちらのメールから確認できます。<p className="underline">バックエンドは
-            <span className="font-semibold">Email.js</span>の技術を使用しています。</p></strong>
+            <strong>
+              ※送信するとこちらのメールから確認できます。
+              <p className="underline">
+                バックエンドは
+                <span className="font-semibold">Email.js</span>
+                の技術を使用しています。
+              </p>
+            </strong>
           </div>
         )}
         {/* 戻るボタン */}
