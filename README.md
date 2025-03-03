@@ -6,7 +6,7 @@
 
 ## 主な機能
 
-- **ランディングページ**: ポートフォリオの紹介、異なるプロジェクトのハイライト。
+- **ランディングページ**: ポートフォリオの紹介、異なるプロジェクトの内容や概略。3Dオブジェクトによるアニメーション。
 - **Aboutページ**: 制作者の紹介、過去のプロジェクトや競技プログラミングの成果。
 - **Servicesページ**: 提供するサービスの紹介（現在制作中）。
 - **Contactフォーム**: ユーザーが制作者に連絡できるフォーム。
@@ -29,7 +29,7 @@
 
 1. リポジトリをクローンする:
    ```bash
-   git clone https://github.com/username/no1.git
+   git clone https://github.com/sinnn9593/no1.git
    ```
 2. 依存関係をインストールする:
    ```bash
@@ -40,7 +40,6 @@
    ```bash
    npm run dev
    ```
-   サイトは [http://localhost:3000](http://localhost:3000) でアクセスできます。
 
 ## 使用方法
 
@@ -51,9 +50,12 @@
 ## 使用技術
 
 - **React**: ユーザーインターフェースを作成するためのフロントエンドライブラリ。
-- **Vite**: React用の高速ビルドツールおよび開発サーバー。
+- **Vite**: React用の高速ビルドツール
+- **Framer MotionやThree.js** : 3dのアニメーションUI
+- **pygame** : コードの簡略化とpygameによる高機能なUX
 - **Docker**: カスタム電卓のためのDocker環境構築。
 - **PyQt5**: GUIアプリケーション開発に使用。
+  etc...
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ## プロジェクト構成
@@ -78,37 +80,64 @@ package.json
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-## UML図
 
-### クラス図
+###ページ遷移図
 
-```plaintext
-classDiagram
-  class App {
-    +basename: string
-    +App()
-  }
+```text
 
-  class Home {
-    +ThreeModel: ThreeModel
-  }
+[Home]
+ ├→ [About Me]
+ ├→ [Service]
+ ├→ [Contact]
+ ├→ [Sample]
+ └→ [More Detail]
 
-  class About
-  class Service
-  class Contact
-  class MoreDetails
-  class Sample
+[About Me]
+ └→ [Home]
 
-  App --> Home
-  App --> About
-  App --> Service
-  App --> Contact
-  App --> MoreDetails
-  App --> Sample
-  Home --> ThreeModel
-  MoreDetails --> Sample
+[Service]
+ └→ [Home]
+
+[Contact]
+ └→ [Home]
+
+[Sample]
+ └→ [Service]  （SampleからServiceへ行ける）
+
+[More Detail]
+ └→ [Home]
 ```
 
-```
+
+
+### UIフロー
+
+```text
+[Home]
+ ├ ボタン「About Me」 → [About Me]
+ ├ ボタン「Service」 → [Service]
+ ├ ボタン「Contact」 → [Contact]
+ ├ ボタン「Sample」 → [Sample]
+ └ ボタン「More Detail」 → [More Detail]
+
+[About Me]
+ └ ボタン「back」 → [Home]
+
+[Service]
+ └ ボタン「back」 → [Home]
+
+[Contact]
+ └ ボタン「back」 → [Home]
+
+[More Detail]
+ └ ボタン「back」 → [Home]
+
+[Sample]
+ ├ ボタン「Back」 → [Home]
+ └ ボタン「More」 → [Service]
 
 ```
+
+
+
+
