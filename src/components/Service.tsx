@@ -234,11 +234,11 @@ pacman/
         <p className="text-lg text-gray-700 mb-6">
           これらの複雑なゴーストの行動規範は、
           <span className="underline">
-            <strong>マンハッタン距離</strong>
+            <strong>マンハッタン距離</strong></span>
             を基準にしたターゲット座標の設定、および
-            <strong>深さ優先探索</strong>
+            <span className="underline"><strong>深さ優先探索</strong></span>
             に基づく<strong>最短経路探索</strong>によって実現されています
-          </span>
+
           。
           <br />
           またパックマンのマップについて、毎回プレイごとに異なるマップをランダムに生成することを可能にしました。深さ優先探索を用いて、スタックに初めの座標を挿入することで、そこから、通路を構築することでマップの生成をしています。
@@ -288,12 +288,12 @@ pacman/
 
       {/* Custom Calculator Section */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">
+        <h2 className="text-3xl font-semibold mb-8">
           🧮 Custom Calculator - 技術解説
         </h2>
 
-        <h3 className="text-xl font-semibold mb-2">概要</h3>
-        <p className="text-lg text-gray-700 mb-6">
+        <h3 className="text-xl font-semibold mb-6">概要</h3>
+        <p className="text-lg text-gray-700 mb-10">
           「Custom Calculator」は、お釣り計算に特化したデスクトップアプリです。
           <br />
           ユーザーが「支払い金額」と「受け取り金額」を入力すると、その差額を計算し表示します。
@@ -304,15 +304,15 @@ pacman/
         </p>
 
         <h3 className="text-xl font-semibold mb-2">技術スタック</h3>
-        <ul className="list-disc pl-6 mb-6">
-          <li>
+        <ul className="list-disc pl-6 mb-10">
+          <li className = "text-lg">
             <strong>Python & PyQt5:</strong>
             <span className="underline">
               デスクトップアプリとしてPythonで実装し、UI部分はPyQt5を使用
             </span>
             。直感的な操作感を提供します。
           </li>
-          <li>
+          <li className = "text-lg">
             <strong>Docker:</strong>
             アプリケーションは
             <span className="underline">Dockerコンテナで管理</span>。
@@ -321,23 +321,22 @@ pacman/
             </span>
             です。
           </li>
-          <li>
+          <li className = "text-xl">
             <strong>シンプル設計:</strong>
             四則演算機能はなく、「お釣り計算」という特定用途に特化。業務や店舗シーンでの素早い計算をサポートします。
           </li>
         </ul>
 
         <h3 className="text-xl font-semibold mb-2">アーキテクチャ</h3>
-        <p className="text-lg text-gray-700 mb-6">
-          アプリケーションはシンプルなクライアント型アーキテクチャを採用。
-          <br />
-          ユーザーの入力は即座にアプリ内部のロジックに反映され、結果がリアルタイムで表示されます。
-          <br />
-          データ保存機能は持たず、計算結果は都度破棄する設計としています。
-        </p>
-
+        <div className = "text-lg text-gray-700 mb-10">
+          <p>
+          アプリケーションはシンプルなクライアント型アーキテクチャを採用。</p>
+          <p> ユーザーの入力は即座にアプリ内部のロジックに反映され、結果がリアルタイムで表示されます。
+          </p>
+          <p>データ保存機能は持たず、計算結果は都度破棄する設計としています。</p>
+        </div>
         <h3 className="text-xl font-semibold mb-2">機能と特徴</h3>
-        <ul className="list-disc pl-6 mb-6">
+        <ul className ="text-lg list-disc pl-6 mb-10">
           <li>
             「支払い金額」「受け取り金額」を入力し、ボタン一つでお釣りを計算
           </li>
@@ -350,8 +349,8 @@ pacman/
           </li>
         </ul>
 
-        <h3 className="text-xl font-semibold mb-2">UI/UXデザイン</h3>
-        <p className="text-lg text-gray-700 mb-6">
+        <h3 className="text-xl font-semibold mb-4">UI/UXデザイン</h3>
+        <p className="text-lg text-gray-700 mb-25">
           デザインは機能重視・シンプル。
           <br />
           必要最小限のボタン配置で、初めて使う人でも迷わず操作できる設計です。
