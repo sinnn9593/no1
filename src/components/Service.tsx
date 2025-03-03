@@ -21,26 +21,27 @@ const Service = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="container mx-auto px-6 py-12 min-h-screen overflow-y-auto"
     >
-      <h1 className="text-4xl font-bold text-center mb-8">Services</h1>
+      <h1 className="text-4xl font-bold text-center mb-35 mt-25">Services</h1>
 
       {/* Snake Game Section */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">
+        <h2 className="text-3xl font-semibold mb-15 mt-15">
           🐍 Snake Game - 技術解説
         </h2>
 
-        <h3 className="text-xl font-semibold mb-2">アーキテクチャ</h3>
-        <p className="text-lg text-gray-700 mb-6">
-          本作のSnake
+        <h3 className="text-xl font-semibold mb-2 mt-5">アーキテクチャ</h3>
+        <div className="text-lg text-gray-700 mb-15 space-y-5">
+          <p>本作のSnake
           Gameは、Pygameをベースに構築されたシンプルながら拡張性の高い構成になっています。
-          <br />
-          ゲームループを軸に、毎フレームごとに「入力の取得」「ゲーム状態の更新」「画面の描画」という3つの処理を順番に実行することでゲームを制御しています。
-          <br />
-          ヘビの移動や果物の生成、衝突判定といった各ロジックは独立した関数に分け、責務が分離された設計です。
-        </p>
+          </p>
+          <p>ゲームループを軸に、毎フレームごとに「入力の取得」「ゲーム状態の更新」「画面の描画」という3つの処理を順番に実行することでゲームを制御しています。
+          </p>
+          <p>ヘビの移動や果物の生成、衝突判定といった各ロジックは独立した関数に分け、責務が分離された設計です。
+          </p>
+        </div>
 
-        <h3 className="text-xl font-semibold mb-2">技術スタック</h3>
-        <ul className="list-disc pl-6 mb-6">
+        <h3 className="text-xl font-semibold mb-8">技術スタック</h3>
+        <ul className="text-lg list-disc pl-6 mb-15 space-y-5">
           <li>
             <strong>Python + Pygame:</strong>
             グラフィック描画、イベント処理、フレームレート制御など、Pygameの機能をフル活用。ヘビや果物、スコア表示など、すべての描画はPygameのSurfaceに直接描画します。
@@ -55,43 +56,45 @@ const Service = () => {
           </li>
         </ul>
 
-        <h3 className="text-xl font-semibold mb-2">
+        <h3 className="text-xl font-semibold mb-8">
           ゲームロジックとデータ管理
         </h3>
-        <p className="text-lg text-gray-700 mb-6">
-          ヘビの身体は座標のリスト（配列）として管理されています。
-          <br />
-          移動するごとに新しい頭の座標がリストに追加され、尻尾側の座標が削除されることで、ヘビの伸縮を表現しています。
-          <br />
-          果物はランダムな座標に生成され、ヘビが果物を食べるとスコアが加算され、ヘビの長さが1マス分伸びる仕組みです。
-          <br />
-          ゲームオーバー判定は<span className="underline">「壁への衝突」</span>,
-          <span className="underline">「自身の身体への衝突」</span>
-          によって行われ、ゲーム終了時にはスコアが表示されるようになっています。
-        </p>
+        <div className="text-lg text-gray-700 mb-6 space-y-5">
+          <p>ヘビの身体は座標のリスト（配列）として管理されています。</p>
+          <p>移動するごとに新しい頭の座標がリストに追加され、尻尾側の座標が削除されることで、ヘビの伸縮を表現しています。</p>
+          <p>果物はランダムな座標に生成され、ヘビが果物を食べるとスコアが加算され、ヘビの長さが1マス分伸びる仕組みです。</p>
+          <p>
+           ゲームオーバー判定は
+            <span className="underline">「壁への衝突」</span>,
+            <span className="underline">「自身の身体への衝突」</span>
+            によって行われ、ゲーム終了時にはスコアが表示されるようになっています。
+          </p>
+        </div>
 
-        <h3 className="text-xl font-semibold mb-2">速度調整と難易度設計</h3>
-        <p className="text-lg text-gray-700 mb-6">
-          ゲーム進行に合わせて、フレームレート（ヘビの移動速度）を徐々に引き上げることで、段階的に難易度が上昇する仕組みになっています。
-          <br />
-          ヘビの体が長くなるほど、移動スペースが限られ、戦略的な操作が求められるよう設計されています。
-          <br />
-          また、果物の生成位置は毎回ランダムに設定されるため、プレイごとに異なる配置・展開が楽しめるようになっています。
-        </p>
 
-        <h3 className="text-xl font-semibold mb-2">
+        <h3 className="text-xl font-semibold mb-8">速度調整と難易度設計</h3>
+        <div className="text-lg text-gray-700 mb-6 space-y-4">
+          <p>ゲーム進行に合わせて、フレームレート（ヘビの移動速度）を徐々に引き上げることで、段階的に難易度が上昇する仕組みになっています。
+          </p>
+          <p>ヘビの体が長くなるほど、移動スペースが限られ、戦略的な操作が求められるよう設計されています。
+          </p>
+          <p>また、果物の生成位置は毎回ランダムに設定されるため、プレイごとに異なる配置・展開が楽しめるようになっています。
+          </p>
+        </div>
+        <h3 className="text-xl font-semibold mb-8">
           Pygameによる描画と画面遷移
         </h3>
-        <p className="text-lg text-gray-700 mb-6">
-          画面描画はPygameのSurfaceに対して、毎フレーム全体を再描画する方式を採用しています。
-          <br />
-          これにより、ヘビの動きや果物の位置変化、スコアのカウントアップなどが即座に反映されます。
-          <br />
-          ゲームオーバー時には、画面全体に「Game
+        <div className="text-lg text-gray-700 mb-6 space-y-4">
+          <p>画面描画はPygameのSurfaceに対して、毎フレーム全体を再描画する方式を採用しています。
+          </p>
+          <p>これにより、ヘビの動きや果物の位置変化、スコアのカウントアップなどが即座に反映されます。
+          </p>
+          <p>ゲームオーバー時には、画面全体に「Game
           Over」のメッセージを表示し、リスタートを促す設計です。
-        </p>
+          </p>
+        </div>
 
-        <div className="text-center mb-6">
+        <div className="text-center mt-20 mb-6">
           <img
             src={snakeUrl}
             alt="Snake Game"
@@ -100,8 +103,8 @@ const Service = () => {
         </div>
 
         {/* ファイル構成セクション */}
-        <h3 className="text-xl font-semibold mb-2">ファイル構成 📂</h3>
-        <pre className="bg-gray-100 p-4 rounded-md mb-6">
+        <h3 className="text-2xl font-semibold mb-15">ファイル構成 📂</h3>
+        <pre className="bg-gray-100 p-4 rounded-md mb-10">
           <code>
             {`
 snake_game/
@@ -134,25 +137,26 @@ snake_game/
 
       {/* Pac-Man Section */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">🕹️ Pac-Man - 技術解説</h2>
+        <h2 className="text-3xl font-semibold mt-15 mb-15">🕹️ Pac-Man - 技術解説</h2>
 
-        <h3 className="text-xl font-semibold mb-2">アーキテクチャ</h3>
-        <p className="text-lg text-gray-700 mb-6">
-          Pac-Manは、エンティティ駆動型および状態遷移型アーキテクチャを採用しており、ゲーム内のすべての要素（Pac-Man本体、ゴースト、エサ、壁など）がそれぞれ独自の状態と振る舞いを持ちます。
-          <br />
-          各エンティティは独立したオブジェクトとして管理され、ゲームループ内で毎フレームごとに状態が更新されます。またPygameを採用しているので、Surfaceに直接描画しています。
-          <br />
-          特にでは、
+        <h3 className="text-xl font-semibold mb-6">アーキテクチャ</h3>
+        <div className="text-lg text-gray-700 mb-6 space-y-4 mb-8">
+          <p>Pac-Manは、エンティティ駆動型および状態遷移型アーキテクチャを採用しており、ゲーム内のすべての要素（Pac-Man本体、ゴースト、エサ、壁など）がそれぞれ独自の状態と振る舞いを持ちます。
+          </p>
+          <p>各エンティティは独立したオブジェクトとして管理され、ゲームループ内で毎フレームごとに状態が更新されます。またPygameを採用しているので、Surfaceに直接描画しています。
+          </p>
+          <p>特にでは、
           <span className="underline">
             「ターゲット座標の設定」「最短経路探索」「ランダム移動」「ステージの自動生成」
           </span>
           など複数のロジックが組み合わさることで、単純な追跡行動に終わらず、多様な動きを実現しています。
-          <br />
-          この構造により、ステージ設計やゴーストの行動パターンをパラメータ化し、ゲームバランスを細かく調整できる設計になっています。
-        </p>
+          </p>
+          <p>この構造により、ステージ設計やゴーストの行動パターンをパラメータ化し、ゲームバランスを細かく調整できる設計になっています。
+          </p>
+        </div>
         {/* フォルダ構成の挿入 */}
-        <h3 className="text-xl font-semibold mb-2">📂 フォルダ構成</h3>
-        <pre className="bg-gray-100 p-4 rounded-md mb-6">
+        <h3 className="text-xl font-semibold mb-15">📂 フォルダ構成</h3>
+        <pre className="bg-gray-100 p-4 rounded-md mb-8">
           <code>
             {`
 pacman/
@@ -167,8 +171,8 @@ pacman/
       `}
           </code>
         </pre>
-        <h3 className="text-xl font-semibold mb-2">技術スタック</h3>
-        <ul className="list-disc pl-6 mb-6">
+        <h3 className="text-xl font-semibold mb-15">技術スタック</h3>
+        <ul className="text-lg list-disc pl-6 mb-6 space-y-10 mb-15">
           <li>
             <strong>Python (3.x):</strong>
             <br />
@@ -209,7 +213,7 @@ pacman/
           </li>
         </ul>
 
-        <h3 className="text-xl font-semibold mb-2">
+        <h3 className="text-xl font-semibold mb-8">
           ゲームロジックとアルゴリズム
         </h3>
         <p className="text-lg text-gray-700 mb-6">
@@ -217,7 +221,7 @@ pacman/
           <br />
           例えば：
         </p>
-        <ul className="list-disc pl-6 mb-6">
+        <ul className="list-disc pl-6 mb-6 space-y-4">
           <li>
             <strong>赤（Blinky）:</strong>{" "}
             最短ルートでPac-Manを直接追跡する「チェイサー」タイプ。
@@ -231,7 +235,7 @@ pacman/
             近距離では逃げるが、遠距離では追いかける「臆病者」タイプ。
           </li>
         </ul>
-        <p className="text-lg text-gray-700 mb-6">
+        <p className="text-lg text-gray-700 mb-15">
           これらの複雑なゴーストの行動規範は、
           <span className="underline">
             <strong>マンハッタン距離</strong></span>
@@ -244,10 +248,10 @@ pacman/
           またパックマンのマップについて、毎回プレイごとに異なるマップをランダムに生成することを可能にしました。深さ優先探索を用いて、スタックに初めの座標を挿入することで、そこから、通路を構築することでマップの生成をしています。
         </p>
 
-        <h3 className="text-xl font-semibold mb-2">
+        <h3 className="text-xl font-semibold mb-8">
           設計パターンとユーザーインタラクション
         </h3>
-        <p className="text-lg text-gray-700 mb-6">
+        <p className="text-lg text-gray-700 mb-25">
           ユーザー操作（矢印キー）によるイベントをもとにPac-Manが移動します。またGame
           RoopによりRoopが回るたびに状況が変わっていきます。
           <br />
@@ -255,14 +259,14 @@ pacman/
         </p>
 
         <PacmanPage />
-        <p className="text-lg text-gray-700 mb-6">
-          {" "}
-          上のSVG図は、ゲーム内のエンティティ（Pac-Man、ゴースト、エサなど）がそれぞれ自分の「状態」を持ち、毎フレームごとに更新される仕組みを表したものです。
-          <br />{" "}
-          プレイヤーの操作やゴーストの動きに応じて、それぞれの状態が変化し、ゲーム全体が進行していきます。
-          <br />{" "}
-          このように個別の状態を管理することで、複雑な動きやイベントにも対応しやすくなっています。{" "}
-        </p>
+        <div className="text-lg text-gray-700 mt-15 mb-6 space-y-4">
+          <p>上のSVG図は、ゲーム内のエンティティ（Pac-Man、ゴースト、エサなど）がそれぞれ自分の「状態」を持ち、毎フレームごとに更新される仕組みを表したものです。
+          </p>
+          <p>プレイヤーの操作やゴーストの動きに応じて、それぞれの状態が変化し、ゲーム全体が進行していきます。
+          </p>
+          <p>このように個別の状態を管理することで、複雑な動きやイベントにも対応しやすくなっています。
+          </p>
+        </div>
 
         <div className="text-center mb-6">
           <img
@@ -293,18 +297,18 @@ pacman/
         </h2>
 
         <h3 className="text-xl font-semibold mb-6">概要</h3>
-        <p className="text-lg text-gray-700 mb-10">
-          「Custom Calculator」は、お釣り計算に特化したデスクトップアプリです。
-          <br />
-          ユーザーが「支払い金額」と「受け取り金額」を入力すると、その差額を計算し表示します。
-          <br />
-          マイナス（負の数）を防ぐため、絶対値（正の数）で差額を表示する仕様です。
-          <br />
-          シンプルな操作性と機能性を重視しており、今後はモバイル対応も視野に入れています。
-        </p>
-
+        <div className="text-lg text-gray-700 mb-10 space-y-4">
+          <p>「Custom Calculator」は、お釣り計算に特化したデスクトップアプリです。
+          </p>
+          <p>ユーザーが「支払い金額」と「受け取り金額」を入力すると、その差額を計算し表示します。
+          </p>
+          <p>マイナス（負の数）を防ぐため、絶対値（正の数）で差額を表示する仕様です。
+          </p>
+          <p>シンプルな操作性と機能性を重視しており、今後はモバイル対応も視野に入れています。
+          </p>
+        </div>
         <h3 className="text-xl font-semibold mb-2">技術スタック</h3>
-        <ul className="list-disc pl-6 mb-10">
+        <ul className="list-disc pl-6 mb-10 space-y-4">
           <li className = "text-lg">
             <strong>Python & PyQt5:</strong>
             <span className="underline">
@@ -327,8 +331,8 @@ pacman/
           </li>
         </ul>
 
-        <h3 className="text-xl font-semibold mb-2">アーキテクチャ</h3>
-        <div className = "text-lg text-gray-700 mb-10">
+        <h3 className="text-xl font-semibold mb-5">アーキテクチャ</h3>
+        <div className = "text-lg text-gray-700 mb-10 space-y-4">
           <p>
           アプリケーションはシンプルなクライアント型アーキテクチャを採用。</p>
           <p> ユーザーの入力は即座にアプリ内部のロジックに反映され、結果がリアルタイムで表示されます。
@@ -336,7 +340,7 @@ pacman/
           <p>データ保存機能は持たず、計算結果は都度破棄する設計としています。</p>
         </div>
         <h3 className="text-xl font-semibold mb-2">機能と特徴</h3>
-        <ul className ="text-lg list-disc pl-6 mb-10">
+        <ul className ="text-lg list-disc pl-6 mb-10 space-y-4">
           <li>
             「支払い金額」「受け取り金額」を入力し、ボタン一つでお釣りを計算
           </li>
@@ -349,14 +353,15 @@ pacman/
           </li>
         </ul>
 
-        <h3 className="text-xl font-semibold mb-4">UI/UXデザイン</h3>
-        <p className="text-lg text-gray-700 mb-25">
-          デザインは機能重視・シンプル。
-          <br />
-          必要最小限のボタン配置で、初めて使う人でも迷わず操作できる設計です。
-          <br />
-          将来的には、ユーザーのフィードバックを元に、カスタマイズ機能やテーマ変更機能の追加も検討しています。
-        </p>
+        <h3 className="text-xl font-semibold mb-8">UI/UXデザイン</h3>
+        <div className="text-lg text-gray-700 mb-25 space-y-4">
+          <p>デザインは機能重視・シンプル。
+          </p>
+          <p>必要最小限のボタン配置で、初めて使う人でも迷わず操作できる設計です。
+          </p>
+          <p>将来的には、ユーザーのフィードバックを元に、カスタマイズ機能やテーマ変更機能の追加も検討しています。
+          </p>
+        </div>
 
         <div className="text-center mb-6">
           <img
