@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import SvgDiagram from "./SvgDiagram";
 
 const Service = () => {
-  const snakeUrl = `${import.meta.env.VITE_BASE_URL || "/src/"}assets/models1/snake.png`;
-  const packmanUrl = `${import.meta.env.VITE_BASE_URL || "/src/"}assets/models1/pac-man.png`;
-  const calculatorUrl = `${import.meta.env.VITE_BASE_URL || "/src/"}assets/models1/calculator.png`;
+  const snakeUrl = `${import.meta.env.VITE_BASE_URL || "/"}assets/models1/snake.png`;
+  const packmanUrl = `${import.meta.env.VITE_BASE_URL || "/"}assets/models1/pac-man.png`;
+  const calculatorUrl = `${import.meta.env.VITE_BASE_URL || "/"}assets/models1/calculator.png`;
   const PacmanPage = () => (
     <div>
       <h2 className="text-2xl font-bold mb-4">

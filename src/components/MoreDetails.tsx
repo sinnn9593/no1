@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const ServicePage = () => {
-  const homeURL = import.meta.env.BASE_URL || "/";
+  const homeURL = import.meta.env.VITE_BASE_URL || "/";
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
