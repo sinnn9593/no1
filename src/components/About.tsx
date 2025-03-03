@@ -120,21 +120,22 @@ const About = () => {
         {/* AtCoder戦績 */}
         <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-            AtCoder 戦績
+            AtCoder 成績
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-xl text-gray-700 leading-relaxed">
             AtCoderでは、様々なアルゴリズムやデータ構造に挑戦してきました。灰色上位に位置することができたのは、問題解決能力を磨く努力と、問題の解析を迅速に行う力を養ってきた証です。競技プログラミングの世界では、常に新たな挑戦が待っていますが、その中で培ったスキルは、現実世界の問題解決にも応用できると感じています。
           </p>
 
           <div className="mt-6">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-2">
               レート分布
             </h3>
-            <p className="text-md text-gray-600">
-              以下は、私のAtCoderでのレート分布です。これを見て、どの程度のスキルレベルにいるのかが一目でわかります。これからもさらに上を目指して挑戦し続けます。
+            <p className="text-xl text-gray-600">
+              以下は、私のAtCoderでのレート分布です。レート別の色分けでは灰色でその中で上位の位置づけです。平均して毎回のコンテストでC問題までの問題を解くことができます。C問題あたりは、ほぼ全探索でで解ける問題が多く、DFS、BFS,尺取り法、bit全探索,再帰関数、順列全探索などの基礎的なアルゴリズムを問題文を読んで、考察をしたうえで使えるくらいの実力です。グラフや木の問題に関しても、少なめの考察の問題であれば解くことができます。競技プログラミングの本質である、計算量削減のアルゴリズムについては、浅く広い知識はありますが、考察ありきの応用した実装はもう少し経験が必要です。
+              またデータ構造は、配列、スタック、キュー、優先度付きキューや、連想配列、ハッシュマップを使うことができます。
             </p>
             <img
-              src="src/assets/atcoder3.png" // レート分布の画像URLを挿入
+              src="src/assets/atcoder3.png" // レート分布の画像URL
               alt="AtCoder レート分布"
               className="w-3/5 mt-4 rounded-md shadow-md"
             />
@@ -143,7 +144,7 @@ const About = () => {
 
         <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">最後に</h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-x1 text-gray-700 leading-relaxed">
             私のキャリアはまだ始まったばかりですが、これからも新しい技術に挑戦し、成長し続けたいと思っています。そして、私の作ったものが、少しでも多くの人々の役に立つことができれば最高です。どんな小さなことでも、人々にインパクトを与えられるようなエンジニアでありたいと考えています。
           </p>
         </div>

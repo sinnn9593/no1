@@ -156,14 +156,14 @@ snake_game/
           <code>
             {`
 pacman/
-├── assets/              // 画像・音声データ
+├── assets/              # 画像・音声データ
 ├── src/
-│   ├── game.py          // メインループ
-│   ├── player.py        // Pac-Manクラス
-│   ├── ghost.py         // ゴーストクラス
-│   ├── map.py           // マップ描画・管理
-│   └── utils.py         // 補助関数
-└── README.md            // 技術解説＆プレイガイド
+│   ├── game.py          # メインループ
+│   ├── player.py        # Pac-Manクラス
+│   ├── ghost.py         # ゴーストクラス
+│   ├── map.py           # マップ描画・管理
+│   └── utils.py         # 補助関数
+└── README.md             # 技術解説＆プレイガイド
       `}
           </code>
         </pre>

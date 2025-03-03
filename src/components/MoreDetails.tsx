@@ -58,7 +58,26 @@ const ServicePage = () => {
           </li>
         </ul>
       </section>
+      {/* ファイル構成セクション */}
+      <h3 className="text-xl font-semibold mb-2">サイトマップ（Sitemap） 📂</h3>
+        <pre className="bg-gray-100 p-4 rounded-md mb-6">
+          <code>
+            {`Home Page
+├── About Me Page
+│      └── Homeへ戻る
+├── Service Page
+│      └── Homeへ戻る
+├── Contact Page
+│      └── Homeへ戻る
+├── Sample Page
+│      ├── Homeへ戻る
+│      └── Service Pageへ遷移
+├── More Detail Page
+     └── Homeへ戻る
 
+    `}
+          </code>
+        </pre>
       {/* 課題と解決策 */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">⚡ 課題と解決策</h2>
