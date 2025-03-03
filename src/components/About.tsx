@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div className="about-page bg-gradient-to-r from-blue-100 via-indigo-200 to-purple-300 text-gray-900 py-16 px-4">
       <div className="container mx-auto max-w-4xl">
-        <h1 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+        <h1 className="text-4xl font-bold text-center mb-25 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
           About Me
         </h1>
 
@@ -134,7 +134,7 @@ const About = () => {
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline text-lg font-medium"
             >
-              ➡️ GitHubリポジトリはこちら
+              ➡️ GitHubリポジトリ
             </a>
           </div>
         </div>

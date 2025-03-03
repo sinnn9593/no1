@@ -251,12 +251,12 @@ pacman/
         <h3 className="text-xl font-semibold mb-8">
           設計パターンとユーザーインタラクション
         </h3>
-        <p className="text-lg text-gray-700 mb-25">
-          ユーザー操作（矢印キー）によるイベントをもとにPac-Manが移動します。またGame
+        <div className="text-lg text-gray-700 mb-25 space-y-4">
+          <p>ユーザー操作（矢印キー）によるイベントをもとにPac-Manが移動します。またGame
           RoopによりRoopが回るたびに状況が変わっていきます。
-          <br />
-          矢印キーが押されると、イベントハンドラーがそれを読み取りパックマンが動く仕組みです。またパックマンの位置に応じて、ある種類のGhostの動きも変化します。またステージの自動生成により、プレイするごとに新鮮感をもたせることができます。
-        </p>
+          </p>
+          <p>矢印キーが押されると、イベントハンドラーがそれを読み取りパックマンが動く仕組みです。またパックマンの位置に応じて、ある種類のGhostの動きも変化します。またステージの自動生成により、プレイするごとに新鮮感をもたせることができます。</p>
+        </div>
 
         <PacmanPage />
         <div className="text-lg text-gray-700 mt-15 mb-6 space-y-4">

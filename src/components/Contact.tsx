@@ -21,7 +21,7 @@ const Contact = () => {
     e.preventDefault();
     setError(""); // エラーをリセット
 
-    // ✅ 環境変数の確認（ここに追加）
+
     console.log("Service ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
     console.log("Template ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
     console.log("Public Key:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
@@ -47,7 +47,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-white py-16 px-8">
       <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-semibold text-center mb-6">Contact Us</h2>
+        <h2 className="text-3xl font-semibold text-center mb-6">Contact Me</h2>
 
         {isSent ? (
           <p className="text-center text-green-600">
@@ -127,7 +127,7 @@ const Contact = () => {
             to="/"
             className="px-6 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition"
           >
-            Back to Home
+            Back
           </Link>
         </div>
       </div>
