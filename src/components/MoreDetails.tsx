@@ -53,6 +53,9 @@ const ServicePage = () => {
           <li>
             <strong>デプロイ環境:</strong> Github Pages
           </li>
+          <li>
+            <strong>バックエンド(コンタクトページ):</strong> Email.js
+          </li>
         </ul>
       </section>
 

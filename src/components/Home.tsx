@@ -26,7 +26,7 @@ const Home = () => {
                 <Link to="/">Home</Link> {/* Homeページにリンク */}
               </li>
               <li>
-                <Link to="/about">About</Link> {/* Aboutページにリンク */}
+                <Link to="/about">About Me</Link> {/* Aboutページにリンク */}
               </li>
               <li>
                 <Link to="/service">Service</Link>{" "}

@@ -49,7 +49,7 @@ const About = () => {
             限られた時間で効率的に作業をこなす必要があり、最適な作業フローを考える習慣がついた。これがアルゴリズムの最適化や効率的なコードを書く意識につながっている。
             ・ 配達員 :
             配達ルートを考えたり、時間内に効率よく動く必要があるため、リアルタイムで最適な選択する力が身についた。これは、ゲームAIのアルゴリズム設計やデータをもとに動的に判断するプログラミングに応用できる。(Google
-            Mapの最短経路や、配達員と店と注文者との組み合わせによるマッチング最適化などアルゴリズムが使われていて気づきも多かったです。){" "}
+            Mapの最短経路や、配達員と店舗と注文者との組み合わせによるマッチング最適化などアルゴリズムが使われていて気づきも多かったです。){" "}
           </p>
         </div>
 
@@ -80,55 +80,68 @@ const About = () => {
           </p>
         </div>
 
-
         <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-         過去の作品 - ブロック崩し
-        </h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-         過去にC++を用いて、「ブロック崩し」ゲームを制作しました。<br />
-        ゲーム全体の構成にはオブジェクト指向設計を採用し、ボール、パドル、ブロックといった各要素をクラスとして定義。<br />
-         それぞれが自律的に振る舞うように実装することで、機能追加や仕様変更にも柔軟に対応できる設計を意識しました。
-       </p>
-       <p className="text-lg text-gray-700 leading-relaxed mt-4">
-          描画処理やイベント処理には「SDL2ライブラリ」を活用。<br />
-          SDL2公式ドキュメントを参考にしながら、自ら必要な機能を読み解き、実装に組み込みました。<br />
-          しかし、SDL2は日本語での解説や事例が非常に少なく、インターネット上にも実践的なサンプルコードがほとんど存在しませんでした。<br />
-          そのため、ライブラリの仕様や使い方を英語の公式ドキュメントや海外の技術フォーラムから地道に調査・検証しながら完成させました。
-       </p>
-       <p className="text-lg text-gray-700 leading-relaxed mt-4">
-          初めてのSDL2を用いたC++作品として、単に動かすだけでなく、オブジェクト指向設計やライブラリ調査力を養う貴重な経験となりました。
-          今後はこの経験を活かし、より複雑なゲームや、他ライブラリへの応用も積極的に行いたいと考えています。
-        </p>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            過去の作品 - ブロック崩し
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            過去にC++を用いて、「ブロック崩し」ゲームを制作しました。
+            <br />
+            ゲーム全体の構成にはオブジェクト指向設計を採用し、ボール、パドル、ブロックといった各要素をクラスとして定義。
+            <br />
+            それぞれが自律的に振る舞うように実装することで、機能追加や仕様変更にも柔軟に対応できる設計を意識しました。
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed mt-4">
+            描画処理やイベント処理には「SDL2ライブラリ」を活用。
+            <br />
+            SDL2公式ドキュメントを参考にしながら、自ら必要な機能を読み解き、実装に組み込みました。
+            <br />
+            しかし、SDL2は日本語での解説や事例が非常に少なく、インターネット上にも実践的なサンプルコードがほとんど存在しませんでした。
+            <br />
+            そのため、ライブラリの仕様や使い方を英語の公式ドキュメントや海外の技術フォーラムから地道に調査・検証しながら完成させました。
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed mt-4">
+            初めてのSDL2を用いたC++作品として、単に動かすだけでなく、オブジェクト指向設計やライブラリ調査力を養う貴重な経験となりました。
+            今後はこの経験を活かし、より複雑なゲームや、他ライブラリへの応用も積極的に行いたいと考えています。
+          </p>
 
-       {/* GitHubリンク */}
-       <div className="mt-6">
-         <a
-         href="https://github.com/sskkkkkkkkk/game1-breakdown-"
-         target="_blank"
-         rel="noopener noreferrer"
-         className="text-blue-600 hover:underline text-lg font-medium"
-       >
-      ➡️ GitHubリポジトリはこちら
-        </a>
-       </div>
-    </div>
-    <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
+          {/* GitHubリンク */}
+          <div className="mt-6">
+            <a
+              href="https://github.com/sskkkkkkkkk/game1-breakdown-"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline text-lg font-medium"
+            >
+              ➡️ GitHubリポジトリはこちら
+            </a>
+          </div>
+        </div>
+        {/*atcoder */}
+        <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Atcoder
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            どんな仕事にも共通して大切にしているのは、情熱と誠実です。私は自分がやることに対して責任を持ち、常に誠実に取り組みます。情熱を持って仕事に取り組むことが、良い結果を生み出す源泉だと信じています。個人としての成長だけでなく、チームや組織、さらには社会にどれだけ貢献できるかを考えながら仕事を進めていきます。
+          </p>
+        </div>
+        <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">最後に</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             私のキャリアはまだ始まったばかりですが、これからも新しい技術に挑戦し、成長し続けたいと思っています。そして、私の作ったものが、少しでも多くの人々の役に立つことができれば最高です。どんな小さなことでも、人々にインパクトを与えられるようなエンジニアでありたいと考えています。
           </p>
-    </div>
-    <div className="text-center mt-12">
+        </div>
+        <div className="text-center mt-12">
           <button
             onClick={goHome}
             className="bg-teal-500 text-white py-2 px-6 rounded-lg shadow-md hover:bg-teal-600 transition duration-300"
           >
             back
           </button>
+        </div>
       </div>
-  </div>
-</div>
+    </div>
   );
 };
 

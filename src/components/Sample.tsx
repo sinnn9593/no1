@@ -24,7 +24,7 @@ const Sample = () => {
           <p className="text-lg text-gray-700 mt-2">クラシックな迷路ゲーム。</p>
           <h3 className="mt-4 text-xl font-bold">🎮 遊び方</h3>
           <p className="text-base">
-            Pac-Manは、矢印キーを使って上下左右に移動できます。迷路内に散らばるドットをすべて食べると、ステージクリアとなります。敵のゴーストたちに捕まるとミスになりますが、迷路内にあるパワーエサを食べると一定時間無敵になり、ゴーストを捕まえて倒すことができます。
+            Pac-Manは、矢印キーを使って上下左右に移動できます。迷路内に散らばるドットをすべて食べると、ステージクリアとなります。
           </p>
           <h3 className="mt-4 text-xl font-bold">🧩 豆知識</h3>
           <p className="text-base">
