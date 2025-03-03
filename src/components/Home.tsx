@@ -14,7 +14,7 @@ const Home = () => {
             type: "spring",
             duration: 1,
             delay: 0.5,
-            stiffness: 130,
+            stiffness: 125,
           }}
           className="flex justify-between items-center p-2 text-white"
         >
