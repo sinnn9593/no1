@@ -1,4 +1,4 @@
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { OrbitControls, useGLTF,Html } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { motion } from "framer-motion";
 import { useRef } from "react";
@@ -55,7 +55,7 @@ const ThreeModel = () => {
     >
       <Canvas camera={{ position: [20, 0, 30], fov: 50 }}>
         <ambientLight intensity={3} />
-        <Suspense fallback ={<div>Loading 3D Model.....</div>}>
+        <Suspense fallback ={<Html center><div>Loading 3D Model.....</div></Html>}>
         <Model
           url={modelUrl}
           scale={7.0}
