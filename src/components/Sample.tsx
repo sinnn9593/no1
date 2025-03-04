@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Sample = () => {
+  const snakeUrl = `${import.meta.env.VITE_BASE_URL || "/"}assets/models1/snake.png`;
+  const packmanUrl = `${import.meta.env.VITE_BASE_URL || "/"}assets/models1/pac-man.png`;
+  const calculatorUrl = `${import.meta.env.VITE_BASE_URL || "/"}assets/models1/calculator.png`;
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -16,7 +19,7 @@ const Sample = () => {
         {/* Pac-Man */}
         <div className="bg-yellow-100 shadow-md rounded-lg p-10 text-center min-h-[500px]">
           <img
-            src="src/assets/models1/pac-man.png"
+            src = {packmanUrl}
             alt="pac-man"
             className="mx-auto w-40 h-40 object-cover mb-4"
           />
@@ -39,7 +42,7 @@ const Sample = () => {
         {/* Snake Game */}
         <div className="bg-green-100 shadow-md rounded-lg p-10 text-center min-h-[500px]">
           <img
-            src="src/assets/models1/snake.png"
+            src={snakeUrl}
             alt="Snake Game"
             className="mx-auto w-40 h-40 object-cover mb-4"
           />
@@ -65,7 +68,7 @@ const Sample = () => {
         {/* Custom Calculator */}
         <div className="bg-blue-100 shadow-md rounded-lg p-10 text-center min-h-[500px]">
           <img
-            src="src/assets/models1/calculator.png"
+            src= {calculatorUrl}
             alt="Calculator"
             className="mx-auto w-40 h-40 object-cover mb-4"
           />
