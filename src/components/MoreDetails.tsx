@@ -87,16 +87,21 @@ const ServicePage = () => {
         </p>
         <ul className="text-lg list-disc pl-6 text-gray-700 mt-4 space-y-4">
           <li>
-            <strong>ビルド時間の最適化:</strong> Vite
-            を利用し、HMR（ホットリロード）を活用
+            <strong>ビルド時間の最適化:</strong> 決められた時間内で、できる限り開発を進めるため、効率性を考慮し、Vite
+            によるホットリロードを活用。ローカルサーバーでの開発をスムーズに行う。
           </li>
           <li>
             <strong>3D モデルの負荷軽減:</strong> GLTF ファイルの最適化と lazy
-            loading
+            loadingを活用。Three.jsを用いたプロジェクト箇所のみコンポーネント分割をし、Suspenseタグで遅延読み込みを実装。
           </li>
           <li>
-            <strong>レスポンシブデザイン:</strong>{" "}
-            TailwindCSSwoを適用し、各コンポーネントやページに関するファイルの読み取りの量を減少
+            <strong>可読性の向上とメンテナンス重視:</strong>
+            TailwindCSSを適用し、各コンポーネントやページに関するプロジェクトファイルの量を減少。
+          </li>
+          <li>
+            <strong>あらゆるデバイスからのサイトへのアクセスを予想・準備:</strong>
+            レスポンシブデザインを適用し、スマートフォン、タブレット、デスクトップなど、あらゆるデバイスでの閲覧を想定。
+            Reactによるコンポーネント設計により、デバイスごとのレイアウトを柔軟に変更可能。(※Home Page以外適用済み)
           </li>
         </ul>
       </section>
