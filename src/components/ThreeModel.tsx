@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import * as THREE from "three";
+import { Suspense } from "react";
 
 const Model = ({
   url,
@@ -39,7 +40,7 @@ const Model = ({
 };
 
 const ThreeModel = () => {
-  const modelUrl = `${import.meta.env.VITE_BASE_URL || "/src/"}assets/models1/scene.gltf`; // 修正箇所
+  const modelUrl = `${import.meta.env.VITE_BASE_URL || "/"}assets/models1/scene.gltf`; // 修正箇所
   return (
     <motion.div
       initial={{ x: -100, opacity: 0 }}
@@ -54,12 +55,14 @@ const ThreeModel = () => {
     >
       <Canvas camera={{ position: [20, 0, 30], fov: 50 }}>
         <ambientLight intensity={3} />
+        <Suspense fallback ={<div>Loading 3D Model.....</div>}>
         <Model
           url={modelUrl}
           scale={7.0}
           position={[-10, -15, 0]}
           rotation={[0, 0, 0]}
         />
+        </Suspense>
         <OrbitControls />
       </Canvas>
     </motion.div>

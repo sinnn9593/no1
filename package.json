@@ -7,7 +7,7 @@
     "dev": "vite",
     "type-check": "tsc -b",
     "build": "vite build",
-    "deploy:build": "cross-env VITE_BASE='/no1/' npm run build",
+    "deploy:build": "cross-env VITE_BASE_URL ='/no1/' npm run build",
     "deploy": "npm run deploy:build && npm run deploy:git",
     "lint": "eslint .",
     "preview": "vite preview"
