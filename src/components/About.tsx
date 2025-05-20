@@ -57,24 +57,6 @@ const About = () => {
           </p>
         </div>
 
-        <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">経歴</h2>
-          <p className="text-lg text-gray-700 leading-relaxed space-y-4">
-            <div>
-              ・ゲストハウス勤務 :
-              海外の方との交流を通じて、英語でのコミュニケーション力と多文化理解を向上。これにより、英語の技術ドキュメントを読む力や、グローバルな開発環境での適応力が身についた。(コードを読み理解する力,関数の変数名から機能の推測する力など。また、エンジニアという職業にに対する海外での評価や印象など)
-            </div>
-            <div>
-              ・工場での勤務 :
-              限られた時間で効率的に作業をこなす必要があり、最適な作業フローを考える習慣がついた。これがアルゴリズムの最適化や効率的なコードを書く意識につながっている。
-            </div>
-            <div>
-              ・ 配達員 :
-              配達ルートを考えたり、時間内に効率よく動く必要があるため、リアルタイムで最適な選択する力が身についた。これは、ゲームAIのアルゴリズム設計やデータをもとに動的に判断するプログラミングに応用できる。(Google
-              Mapの最短経路や、配達員と店舗と注文者との組み合わせによるマッチング最適化などアルゴリズムが使われていて気づきも多かったです。)
-            </div>
-          </p>
-        </div>
 
         <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
