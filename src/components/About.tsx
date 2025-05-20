@@ -28,7 +28,7 @@ const About = () => {
             開発・スキル
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed space-y-4">
-            私は広く浅く多くの技術に触れてきました。主に以下の分野で経験があります。
+            私は多くの技術に触れてきました。主に以下の分野で経験があります。
             <br />
             <br />
             <div>
@@ -56,6 +56,7 @@ const About = () => {
             </div>
           </p>
         </div>
+
 
 
         <div className="my-12 bg-white p-8 rounded-xl shadow-lg shadow-gray-400/30">
