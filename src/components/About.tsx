@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"; // useNavigateをインポート
 
 const About = () => {
   const navigate = useNavigate(); // useNavigateフックを使用してナビゲーション関数を取得
-  const atcoderUrl = `${import.meta.env.VITE_BASE_URL || "/"}assets/models1/atcoder6.png`;
+  const atcoderUrl = `${import.meta.env.VITE_BASE_URL || "/"}assets/models1/atcoder5.png`;
   const goHome = () => {
     navigate("/"); // ホームページ（'/'）に遷移
   };
